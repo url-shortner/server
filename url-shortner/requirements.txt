@@ -1,0 +1,17 @@
+asgiref==3.2.3
+certifi==2019.11.28
+chardet==3.0.4
+Django==2.2.10
+django-extensions==2.2.5
+djangorestframework==3.11.0
+idna==2.8
+mysqlclient==1.4.6
+pytz==2019.3
+requests==2.22.0
+six==1.14.0
+sqlparse==0.3.0
+urllib3==1.25.7
+django-import-export==2.0.1
+django-model-utils==4.0.0
+django-ipware==2.1.0
+drf-yasg==1.17.1

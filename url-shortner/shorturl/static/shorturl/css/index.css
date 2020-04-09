@@ -1,0 +1,33 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    background-image: url("../assets/main-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.fullscren {
+    width: 100vw;
+    height: 100vh;
+}
+
+.flex {
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+}
+
+.absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.center {
+    text-align: center;
+}
+
+.white {
+    color: white;
+}

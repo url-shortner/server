@@ -1,0 +1,43 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>한줄로 끝내는 항공예약 - Airtxt</title>
+    <meta name="author" content="zaeval">
+    <meta name="description" content="airtxt 연결">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static "shorturl/css/index.css" %}"/>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155034484-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-155034484-3');
+    </script>
+</head>
+<body>
+<div class="fullscren">
+
+    <div class="flex absolute fullscren center">
+        <div>
+            <img src="{% static "shorturl/assets/loading-bars.svg" %}" alt="로딩이미지"
+                 class="center" width="128" height="128"/>
+            <h1 class="h1 mt2 mb0 white center">조금만 기다려 주세요</h1>
+        </div>
+    </div>
+</div>
+<script>
+    setTimeout(function () {
+        window.location.href = "{{ url }}";
+    }, 2000);
+</script>
+</body>
+</html>
