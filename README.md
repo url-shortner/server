@@ -1,4 +1,4 @@
-# Airtxt server github repository입니다.
+# Url shortner server github repository입니다.
 
 ## local 환경에서 db를 수정하고 테스트해야할 때
 
