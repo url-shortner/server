@@ -10,7 +10,7 @@ sudo chown www-data:www-data /home/ubuntu/server
 
 directory="/home/ubuntu/development"
 source /home/ubuntu/server/venv/bin/activate
-sudo python3 /home/ubuntu/server/manage.py makemigrationsrl
+sudo python3 /home/ubuntu/server/manage.py makemigrations
 
 if [ -d "$directory" ]; then
     sudo cp /home/ubuntu/development/server/wsgi.py /home/ubuntu/server/ucut/wsgi.py
@@ -24,4 +24,4 @@ else
 fi
 
 sudo python3 /home/ubuntu/server/manage.py collectstatic --noinput
-sudo python3 /home/ubuntu/server/manage.py runscript migrate_entity -v3
+#sudo python3 /home/ubuntu/server/manage.py runscript migrate_entity -v3
