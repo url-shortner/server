@@ -1,7 +1,7 @@
 #!/bin/bash
 
-sudo python3 -m virtualenv /home/ubuntu/airtxt/venv/
-sudo chown -R ubuntu:ubuntu /home/ubuntu/airtxt/venv/
-source /home/ubuntu/airtxt/venv/bin/activate
-pip3 install -r /home/ubuntu/airtxt/requirements.txt
+sudo python3 -m virtualenv /home/ubuntu/server/venv/
+sudo chown -R ubuntu:ubuntu /home/ubuntu/server/venv/
+source /home/ubuntu/server/venv/bin/activate
+pip3 install -r /home/ubuntu/server/requirements.txt
 deactivate

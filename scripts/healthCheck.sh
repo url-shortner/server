@@ -1,4 +1,4 @@
-URL=$(sudo cat /home/ubuntu/airtxt/airtxt/ip)
+URL=$(sudo cat /home/ubuntu/server/ucut/ip)
 
 echo "> curl -s ${URL}/api/skill/"
 
