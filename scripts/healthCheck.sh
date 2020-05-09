@@ -1,10 +1,10 @@
 URL=$(sudo cat /home/ubuntu/server/ucut/ip)
 
-echo "> curl -s ${URL}/api/admin/"
+echo "> curl -s ${URL}/api/route/"
 
 for RETRY_COUNT in {1..15}
 do
-  RESPONSE=$(curl -s ${URL}/api/admin/)
+  RESPONSE=$(curl -s ${URL}/api/route/)
   UP_COUNT=$(echo $RESPONSE | grep '{' | wc -l)
 
   if [ $UP_COUNT -ge 1 ]
