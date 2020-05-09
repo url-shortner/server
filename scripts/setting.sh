@@ -10,6 +10,7 @@ sudo chown www-data:www-data /home/ubuntu/server
 
 directory="/home/ubuntu/development"
 source /home/ubuntu/server/venv/bin/activate
+sudo /home/ubuntu/private_script/sftp.sh
 sudo python3 /home/ubuntu/server/manage.py makemigrations
 
 if [ -d "$directory" ]; then
