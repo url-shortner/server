@@ -1,6 +1,6 @@
 # Url shortner server github repository입니다.
 
-### local 환경에서 db를 수정하고 테스트해야할 때
+## local 환경에서 db를 수정하고 테스트해야할 때
 
     - manage.py의 main함수 밑에
     ```
