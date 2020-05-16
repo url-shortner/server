@@ -25,6 +25,7 @@ urlpatterns = [
         path('<str:key>',Route.as_view({'get':'retrieve'}))
     ])),
     path('<str:key>', views.redirection),
+    path('ad/tenping/<str:key>', views.ad_tenping),
 
 ]
 # handler404='views.handle_page_not_found_404'

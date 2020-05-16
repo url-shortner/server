@@ -12,6 +12,7 @@ from drf_yasg.utils import swagger_auto_schema
 from rest_framework import viewsets, status
 from rest_framework.decorators import permission_classes
 from rest_framework.response import Response
+from rest_framework.decorators import api_view
 
 from shorturl import models
 from shorturl.models import Route
@@ -38,6 +39,10 @@ def redirection(request, key):
     route.save()
     transaction_sig.send(sender=None, request=request, key=route, disabled=False)
     return redirect(route.origin)
+
+@api_view(('GET',))
+def ad_tenping(request, key):
+    return Response({'msg':key}, status=status.HTTP_200_OK)
 
 class Route(viewsets.ModelViewSet):
     queryset = Route.objects.all()
@@ -69,3 +74,5 @@ class Route(viewsets.ModelViewSet):
         route.save()
         transaction_sig.send(sender=None, request=request, key=route, disabled=False)
         return Response(RouteSerializer(route).data, status=status.HTTP_200_OK)
+
+
