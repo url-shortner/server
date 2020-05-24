@@ -39,3 +39,14 @@ class Tenping:
                 "url": tmp.select_one("a")["href"],
             })
         return result
+    def getAd(self, id):
+        query_parameter = {"CampaignID": id}
+        html = self.get("/Home/Send_Campaign_SNS", params=query_parameter)
+        soup = bs(html.text, "html.parser")
+
+        return {
+            "title": soup.select_one("#contentsboxMessage").text.strip(),
+            "imgUrl": soup.select_one("#contentsboxMessage img")["src"],
+            "adUrl": soup.select_one("#contentsboxMessage a")["href"],
+        }
+
