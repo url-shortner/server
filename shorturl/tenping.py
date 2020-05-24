@@ -1,4 +1,5 @@
 import requests
+from urllib.parse import urlparse, parse_qs
 from bs4 import BeautifulSoup as bs
 
 class Tenping:
@@ -37,6 +38,7 @@ class Tenping:
                     "method": tmp.select_one("dl > dd:nth-child(6)").text,
                 },
                 "url": tmp.select_one("a")["href"],
+                "id": parse_qs(urlparse(tmp.select_one("a")["href"]).query)["CampaignID"][0],
             })
         return result
     def getAd(self, id):
